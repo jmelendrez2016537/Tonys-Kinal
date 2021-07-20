@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporteServicios" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec9102df-0215-467d-80bc-cc872b0b1a5d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_SubReporteServicio]]>
+	</queryString>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="187" height="30" uuid="5ecef80f-3c9e-4f01-8276-90f107b95184"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Producto]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="41" width="202" height="1" uuid="5c4a6bbd-e4ce-473b-80b4-ba405be29eaf"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineColor="#0033FF"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="9" width="100" height="20" uuid="d37ac08a-7223-4c24-9abf-ae6848b708cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="39" width="202" height="1" uuid="487b1cb2-c8ac-44f3-8b6c-37e38ed6e065"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dashed" lineColor="#0A0000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

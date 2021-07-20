@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jonadabmelendrez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="410.0" fitWidth="710.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FondoMenu.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="29.0" prefWidth="227.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Modulos">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#tipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#empresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#producto" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#tipoPlato" text="Tipo Plato" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reportes">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#productos_has_platos" text="Productos_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#servicios_has_platos" text="Servicios_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#servicios_has_empleados" text="Servicios_has_Empleados" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Acerca de">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Creador" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="227.0" layoutY="63.0" prefHeight="95.0" prefWidth="346.0" text="Tony's Kinal">
+         <font>
+            <Font name="System Italic" size="62.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.23809523809523808" startY="0.1380952380952381">
+               <stops>
+                  <Stop color="#2f0707" />
+                  <Stop color="#a40f0f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="115.0" layoutY="251.0" prefHeight="95.0" prefWidth="417.0" text="Bienvenido!!">
+         <font>
+            <Font size="75.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.13809523809523813" endY="0.7095238095238096" startX="0.13333333333333333">
+               <stops>
+                  <Stop color="#2f0707" />
+                  <Stop color="#fff600" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="125.0" fitWidth="114.0" layoutX="596.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/LogoKinal.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

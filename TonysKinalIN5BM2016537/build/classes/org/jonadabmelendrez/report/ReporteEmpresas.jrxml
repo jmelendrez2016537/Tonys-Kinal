@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72742a7c-6878-4dc5-94d7-e6092967532b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="2"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="752" uuid="30fc7f16-d0d3-42ab-95bc-bf8843047596"/>
+				<imageExpression><![CDATA["C:\\Users\\Cesi\\Documents\\NetBeansProjects\\TonysKinalIN5BM2016537\\src\\org\\jonadabmelendrez\\img\\membretado.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="49" y="82" width="507" height="492" uuid="4fdafcef-7b13-495b-a58f-349986477afc"/>
+				<imageExpression><![CDATA["C:\\Users\\Cesi\\Documents\\NetBeansProjects\\TonysKinalIN5BM2016537\\src\\org\\jonadabmelendrez\\img\\Marca de agua.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<image>
+				<reportElement x="310" y="0" width="78" height="78" uuid="85031bc4-7deb-4434-8e68-fb37e78eeedb"/>
+				<imageExpression><![CDATA["C:\\Users\\Cesi\\Documents\\NetBeansProjects\\TonysKinalIN5BM2016537\\src\\org\\jonadabmelendrez\\img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="390" y="18" width="166" height="38" uuid="cd3761b8-d0e7-4d4b-9863-beb54992c7c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="0" width="336" height="35" uuid="387e368d-4293-42a4-9f74-4c39cfeb445e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Adobe Caslon Pro Bold" size="26" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPRESAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="40" forecolor="#000000" backcolor="#3333FF" uuid="ec679078-568b-4193-b336-b35a0e297899"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="10" width="112" height="20" uuid="2b71fbf8-47ff-4e16-84c2-9350c06cc882"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="10" width="110" height="20" uuid="12238fc2-a043-4f04-a89f-f2509bf5a45f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="10" width="100" height="20" uuid="7a1a3a92-9b5b-48a0-913c-ea0624fd57c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="10" width="100" height="20" uuid="6c2fb810-7e69-4dfe-90cb-207a6618b977"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="10" width="100" height="20" uuid="396544b5-7612-4aa4-a7be-0d1739fbbe1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="10" width="100" height="20" uuid="2eabb017-0d05-4f37-987f-d9db3d3578e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="100" height="20" uuid="158abe34-fb65-4246-a28e-ed5aece75b20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="10" width="100" height="20" uuid="b3222aad-e3e7-4b71-801c-e561e81bb686"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="20" y="40" width="520" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c3106b57-0a6a-40f4-a661-1a23b3f477d0"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="84" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="89" y="28" width="381" height="29" uuid="3bc64814-96ec-4140-97d4-9a799fffae9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Siempre da más de lo que esperan de ti.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
